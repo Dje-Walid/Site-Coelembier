@@ -20,3 +20,5 @@ function createAcc($nom,$prenom,$email,$pseudo,$mdp){
 	$bd->execute();
     
 }
+
+?>
