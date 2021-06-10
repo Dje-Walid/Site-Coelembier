@@ -1,0 +1,69 @@
+
+.page {
+    display: grid;
+    grid-template-columns:(3, 2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:60px;
+}
+
+.histoire {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 20px;
+}
+.histoire h1 {
+    text-align: center;
+}
+
+.equipement {
+    
+    margin-right:15%;
+    grid-column:2;
+    grid-row: 1;
+}
+
+.equipement h1 {
+    text-align: center;
+}
+
+.tshirt, .tshirt p {
+    border: solid 1px #03224c;
+    text-align: center;
+}
+
+.actions {
+    margin-top:-100px;
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 200px;
+    margin-right: 150px;
+    font-size: 20px;
+
+}
+
+.actions h1 {
+    text-align: center;
+}
+
+.actions li {
+    margin-left: 100px;
+}
+
+.installation {
+    margin-top:20px;
+    grid-column: 1;
+    grid-row: 3;
+    font-size:20px;
+    margin-bottom:100px;
+}
+
+.installation h1 {
+    text-align: center;
+}
+
+.installation li {
+    margin-left:300px;
+    margin-right:150px;
+}

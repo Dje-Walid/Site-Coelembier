@@ -1,0 +1,52 @@
+.pied {
+    margin-top:50px;
+}
+.pied p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.pied p, .photopied {
+    color:azure;
+    background-color: #03224c;
+    text-align: center;
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+
+.eldera {
+    width: 10%;
+    margin-right:125px;
+    margin-bottom:4px;
+}
+
+.decathlon {
+    width: 10%;
+    margin-right:125px;
+}
+
+.obut {
+    width: 10%;
+    margin-right:125px;
+    margin-bottom:25px;
+}
+
+.delta {
+    width: 7%;
+    margin-right:125px;
+    margin-bottom:10px;
+}
+
+.cgl {
+    width: 7%;
+    margin-right:125px;
+    margin-left:100px;
+    margin-bottom:6px;
+}
+
+.villepinte {
+    width: 10%;
+    margin-right:100px;
+    margin-bottom:20px;
+}
