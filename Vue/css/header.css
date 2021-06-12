@@ -1,7 +1,7 @@
 .logo {
     width:100px;
     float:left;
-    margin-top:-140px;
+    margin-top:-157px;
     margin-left:210px;
 }
 
@@ -9,40 +9,45 @@ nav {
 
     height:60px;
     margin: 0 auto;
-    background: #fff;
-    padding: 50px 0;
-    margin-bottom:10px;
-    background-color:#03224C;
-    border:solid 3px azure;
 }
-nav .nom {
-    margin-top:-50px;
-    color:cornsilk;
-    margin-left: 3px;
-    margin-right: 3px;
+
+.nom {
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #03224C;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: solid 3px white;
 }
-nav .nom h1 {
+
+.bandeRouge{
+    border: solid 3px red;
+}
+
+.nom h1 {
     text-align: center;
     font-size: 1cm;
 }
-nav .nom h2 {
+.nom h2 {
     text-align: center;
     font-size: 0.75cm;
 }
 
 nav ul {
     list-style: none;
-    margin-left:25%;
+    margin-left:0%; /* 2s */
+    padding-left: 27%;
 }
 
 nav ul li {
     display: inline-block;
-    margin-bottom:50px;
+    margin-bottom:10px;
 }
 
-  nav ul li a {
+nav ul li a {
     display: block;
-    padding: 15px;
+    padding: 0px 15px 15px 15px; /* Change la position de la nav. */
     text-decoration: none;
     color:dimgray;
     font-weight: 800;
@@ -50,9 +55,9 @@ nav ul li {
     margin: 0 10px;
 }
 
-  nav ul li a,
-  nav ul li a:after,
-  nav ul li a:before {
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
     transition: all .5s;
 }
 
@@ -106,3 +111,36 @@ nav.fill ul li a:hover:after {
     -moz-animation: fill 1s forwards;
     opacity: 1;
 }
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position:absolute;
+    width: 10%;
+    padding-left: 15px;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
