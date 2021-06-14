@@ -25,6 +25,14 @@
             <li><a href="#">PHOTOS-VIDEOS</a></li>
             <li><a href="index.php?controle=c_adhesion&action=adhesion">ADHESION</a></li>
             <li><a href="#">CONTACTS</a></li>
+
+            <?php require("./Controleur/c_aphb.php");
+                  if(!isConnected()) : ?>
+            <li><a href="index.php?controle=c_connexion&action=connexion">Connexion / Inscription</a></li>
+            <?php else : ?>
+            <li><a href="index.php?controle=c_profil&action=profil">Profil</a></li>
+            <?php endif; ?>
+
         </ul>
     </nav>
 </body>

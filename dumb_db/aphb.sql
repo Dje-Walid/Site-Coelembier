@@ -9,6 +9,7 @@ CREATE TABLE Adherents(
    prenomAdherent VARCHAR(50) NOT NULL,
    telephoneAdherent VARCHAR(50),
    mailAdherent VARCHAR(50),
+   mdpAdherent VARCHAR(50) NOT NULL,
    paiementAdherent INT NOT NULL,
    isAdmin INT NOT NULL,
    PRIMARY KEY(idAdherent)
