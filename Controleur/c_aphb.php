@@ -1,11 +1,11 @@
 <?php
 
-function isConnected(){
-    
-    if(isset($_SESSION['profil']['id_user'])){
-        return true;
-    }
-    else{
-        return false;
-    }
+function isConnected()
+{
+    return isset($_SESSION['user']);
+}
+
+function isAdmin()
+{
+    return isConnected() && $_SESSION['user']['isAdmin'] == 1;
 }

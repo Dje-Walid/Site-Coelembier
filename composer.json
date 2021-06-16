@@ -1,0 +1,8 @@
+{
+    "name": "aphb/composer",
+    "type": "project",
+    "minimum-stability": "stable",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18"
+    }
+}

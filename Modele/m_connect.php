@@ -6,7 +6,7 @@
 	$passBD="";         // ou "root"
 try {
 
-	$pdo = new PDO ("mysql:server=$hostname; dbname=$base", "$loginBD", "$passBD");
+	$pdo = new PDO ("mysql:host=$hostname; dbname=$base", "$loginBD", "$passBD");
 	//die('OK connexion');
 }
 

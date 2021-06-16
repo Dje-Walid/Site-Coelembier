@@ -1,42 +1,49 @@
 <?php
 
+require("./Modele/m_connexion.php");
+
 function connexion(){
-    require("./Modele/m_connexion.php");
     require("./Vue/v_connexion.php");
 }
 
 function userExist(){
-    require("./Modele/m_connexion.php");
 
-    $mail = isset($_POST['mailCo'])?($_POST['mailCo']):'';
-    $mdp = isset($_POST['mdpCo'])?($_POST['mdpCo']):'';
+    extract($_POST);
 
-    if(!is_null(checkUser($mail, $mdp))){
-        $_SESSION['user'] = checkUser($mail, $mdp);
-        if(password_verify($mdp, $_SESSION['user']['mdpAdherent'])){
+    $_SESSION['user'] = checkUser($mailCo);
+
+    $user = checkUser($mailCo);
+
+    var_dump($user['mailAdherent']);
+
+    if($user){
+
+        if( password_verify($mdpCo, $user['password']) ){
+            $_SESSION['user'] = $user;
             require("./Vue/v_accueil.php");
         }
         else{
-            $msg = "Votre pseudo ou votre mot de passe n'est pas valide";
+            $msg = "Votre mail ou votre mot de passe n'est pas bon";
             require("./Vue/v_connexion.php");
         }
-    }
-    else{
-        $msg = "Votre pseudo ou votre mot de passe n'est pas valide";
-        require("./Vue/v_connexion.php");
     }
 
 }
 
 function userCrea(){
-    require("./Modele/m_connexion.php");
+    
+    extract($_POST);
 
-    /*$nom = isset($_POST['nom'])?($_POST['nom']):'';
-    $prenom = isset($_POST['prenom'])?($_POST['prenom']):'';
-    $email = isset($_POST['email'])?($_POST['email']):'';
-    $username = isset($_POST['pseudo'])?($_POST['pseudo']):'';
-    $mdp = isset($_POST['mdp'])?($_POST['mdp']):'';*/
+    createAcc($nomIns, $prenomIns, $telephoneIns, $mailIns, $mdpConfIns);
 
+    //$_SESSION['user'] = $profil;
 
-    //createAcc($_POST[Nom]);
+    if(isset($_SESSION['user'])){
+        var_dump($_SESSION['user']['prenomAdherent'] . "ICI");
+        require("./Vue/v_accueil.php");
+    }
+    else{
+        $msg = "L'adresse mail existe déjà";
+        require("./Vue/v_connexion.php");
+    }
 }

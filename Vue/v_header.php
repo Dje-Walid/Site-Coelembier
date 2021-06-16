@@ -1,5 +1,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="./Vue/css/header.css">
+<link href="https://fr.allfont.net/allfont.css?fonts=stencil" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -30,7 +31,11 @@
                   if(!isConnected()) : ?>
             <li><a href="index.php?controle=c_connexion&action=connexion">Connexion / Inscription</a></li>
             <?php else : ?>
-            <li><a href="index.php?controle=c_profil&action=profil">Profil</a></li>
+            <li class="deroulant"><a href="index.php?controle=c_profil&action=profil">Profil</a>
+                <ul class="sous">
+                    <li><a href="index.php?controle=c_profil&action=deconnexion">Déconnexion</a></li>
+                </ul>
+            </li>
             <?php endif; ?>
 
         </ul>
