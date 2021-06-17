@@ -1,27 +1,38 @@
 
 .page {
+    position: relative;
     display: grid;
-    grid-template-columns:(3, 2);
+    grid-template-columns:(2, 2);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top:60px;
+    font-size:20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
+.page::after {
+    content:'';
+    position: absolute;
+    top:0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("https://www.lutece-papierpeint.com/wp-content/uploads/2019/06/SH34502.jpg");
+    opacity: 0.025;
+}
 .histoire {
     grid-column: 1;
     grid-row: 1;
-    margin-left: 150px;
-    margin-right: 150px;
-    font-size: 20px;
 }
-.histoire h1 {
+
+.histoire h1{
     text-align: center;
 }
 
 .equipement {
-    
-    margin-right:15%;
-    grid-column:2;
+    grid-column: 2;
     grid-row: 1;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 .equipement h1 {
@@ -34,9 +45,56 @@
 }
 
 .actions {
-    margin-top:-100px;
     grid-column: 1;
     grid-row: 2;
+}
+.actions h1 {
+    text-align: center;
+}
+
+.installation {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+}
+.installation img {
+    width: 50%;
+}
+/*
+.histoire {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 23px;
+}
+.histoire h1 {
+    text-align: center;
+}
+
+.histoire p {
+    columns:2;
+}
+
+.equipement {
+    
+    margin-right:15%;
+    grid-column:2;
+}
+
+.equipement h1 {
+    text-align: center;
+}
+
+.tshirt, .tshirt p {
+    border: solid 1px #03224c;
+    text-align: center;
+}
+
+.actions {
+    margin-top:-25px;
+    grid-column: 1;
+    grid-row: 3;
     margin-left: 200px;
     margin-right: 150px;
     font-size: 20px;
@@ -46,14 +104,16 @@
 .actions h1 {
     text-align: center;
 }
-
+.action {
+    columns:2;
+}
 .actions li {
     margin-left: 100px;
 }
 
 .installation {
     margin-top:20px;
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 3;
     font-size:20px;
     margin-bottom:100px;
@@ -67,3 +127,5 @@
     margin-left:300px;
     margin-right:150px;
 }
+
+*/

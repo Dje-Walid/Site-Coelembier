@@ -67,7 +67,6 @@ CREATE TABLE IF NOT EXISTS `tournois` (
   PRIMARY KEY (`idTournoi`),
   KEY `idChampionnat` (`idChampionnat`),
   CONSTRAINT `tournois_ibfk_1` FOREIGN KEY (`idChampionnat`) REFERENCES `championnats` (`idChampionnat`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
