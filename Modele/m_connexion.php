@@ -10,7 +10,7 @@ function createAcc($nom, $prenom, $telephone, $mail ,$mdp){
         /*$test = sql('SHOW DATABASES');
         var_dump($test->fetchAll());*/
 
-        sql("INSERT INTO adherents (nomAdherent, prenomAdherent, telephoneAdherent, mailAdherent, mdpAdherent, paiementAdherent, isAdmin) VALUES (:nom, :prenom, :telephone, :mail, :mdp, 1, 1)", array(
+        sql("INSERT INTO adherents (nomAdherent, prenomAdherent, telephoneAdherent, mailAdherent, mdpAdherent, paiementAdherent, isAdmin) VALUES (:nom, :prenom, :telephone, :mail, :mdp, 0, 0)", array(
             'nom' => $nom,
             'prenom' => $prenom,
             'telephone' => $telephone,
