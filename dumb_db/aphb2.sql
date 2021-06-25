@@ -28,6 +28,7 @@ INSERT INTO `adherents` (`idAdherent`, `nomAdherent`, `prenomAdherent`, `telepho
 
 CREATE TABLE IF NOT EXISTS `championnats` (
   `idChampionnat` int(11) NOT NULL AUTO_INCREMENT,
+  `nomChampionnat` varchar(100) NOT NULL,
   `typeChampionnat` int(11) NOT NULL,
   `resultatChampionnat` varchar(50) DEFAULT NULL,
   `clubDomicile` varchar(50) DEFAULT NULL,
@@ -36,9 +37,9 @@ CREATE TABLE IF NOT EXISTS `championnats` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*!40000 ALTER TABLE `championnats` DISABLE KEYS */;
-INSERT INTO `championnats` (`idChampionnat`, `typeChampionnat`, `resultatChampionnat`, `clubDomicile`, `clubExterieur`) VALUES
-	(1, 1, NULL, NULL, NULL),
-	(2, 1, NULL, NULL, NULL);
+INSERT INTO `championnats` (`idChampionnat`,`nomChampionnat`, `typeChampionnat`, `resultatChampionnat`, `clubDomicile`, `clubExterieur`) VALUES
+	(1,'APHB interne', 1, NULL, NULL, NULL),
+	(2,'Championnat de France', 1, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `championnats` ENABLE KEYS */;
 
 CREATE TABLE IF NOT EXISTS `participer` (

@@ -1,0 +1,147 @@
+/*#region BARRE D'AVANCEMENT */
+
+progress{
+    width:1142px;
+    padding:1px;
+    background-color:lightgrey;
+    border:0px solid black;
+    height:28px;
+}
+
+progress{
+    color:red;
+}
+
+progress::-webkit-progress-value {
+    background: red;
+}
+
+/* CHANGE LA COULEUR DE LA BARRE */
+progress::-moz-progress-bar {
+background: #03224C;
+}
+
+progress::-webkit-progress-value {
+background: white;
+}
+
+progress::-webkit-progress-bar {
+background: red;
+}
+
+.barre{
+    position : relative;
+    margin-top: -16px;
+    margin-left: -2.3px;
+}
+
+.cercle1{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -13;
+    left: 30;
+    border-radius: 30px;
+    background: #03224C;
+    border: 1px solid #03224C;
+}
+
+.cercle1 a{
+    z-index: 1;
+    color: white;
+    margin-left: 19px;
+    font-size: 48px;
+}
+
+.cercle2{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -13;
+    left: 260;
+    border-radius: 30px;
+    background: lightgray;
+    border: 1px solid gray;
+}
+
+.cercle2 a{
+    z-index: 1;
+    color: gray;
+    margin-left: 19px;
+    font-size: 48px;
+}
+
+/*#endregion */
+
+/*#region FOMULAIRE */
+
+.formulaire{
+    box-shadow: 0px 2px 3px black;
+    margin-top: 80px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 10%;
+}
+
+p{
+    font-size: 24px;
+}
+
+.interieurFormulaire{
+    margin-left: 8%;
+    margin-top: 4%;
+}
+
+/*#endregion */
+
+/*#region ETAPE 1 CHAMPIONNAT */
+.nomChamp{
+    width: 20%;
+    height: 5%;
+    background-color: white;
+    border: 3px solid #03224C;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 0px;
+}
+
+/*#endregion */
+
+/*#region ETAPE 2 TOURNOI */
+.typeCompet{
+    width: 20%;
+    height: 5%;
+    background-color: white;
+    border: 3px solid #03224C;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+.date{
+    width: 20%;
+    height: 5%;
+    border: 3px solid #03224C;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+/*#endregion */
+
+.btnIns {
+    font-size: 20px;
+    margin-left: 85%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 5%;
+    width: 10%;
+    background-color: #03224C;
+    color: white;
+    border-color: #03224C;
+}
+
+.value {
+    font-size: 20px;
+    margin-top: -10px;
+    width: 40%;
+    height: 5%;
+}
