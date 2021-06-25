@@ -61,12 +61,11 @@ function nextNewChamp(elmnt){
 
 function nextNewTournoi(){
     date = document.querySelector(".date").value;
+    creaChampionnat(nomChamp, date, type);
 
-    var url = "../Controleur/c_championnats.php";
-    $.post(url,creaChampionnat(nomChamp,date,type));
 }
 
-$("#jq").click(tournoi() {
-    var url = "../Controleur/c_championnats.php";
-    $.post(url,creaChampionnat(nomChamp,date,type));
-});
+function creaChampionnat(nomChampionnat, dateTournoi, typeTournoi){
+    var echo = cnx().ajax.phpPostSyn("../Controleur/c_championnats.php", "creaChampionnat", nomChampionnat, dateTournoi, typeTournoi);
+    return echo;
+}
