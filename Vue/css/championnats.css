@@ -23,3 +23,24 @@ h1 {
     text-align: center;
     color: white;
 }
+
+.editScore {
+    width: 100%;
+    font-size: 16px;
+    border-color:transparent;
+    background-color: transparent;
+    color: black;
+}
+
+.admin {
+    width: 50%;
+}
+
+.white, .noBorder{
+    border: 2px solid white;
+}
+
+.buttonEdit, .buttonValidate {
+    background-color: #03224C;
+    border: 1px solid #03224C;
+}

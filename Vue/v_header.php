@@ -2,6 +2,7 @@
 <link rel="stylesheet" type="text/css" href="./Vue/css/header.css">
 <link href="https://fr.allfont.net/allfont.css?fonts=stencil" rel="stylesheet" type="text/css" />
 <link href="https://fr.allfont.net/allfont.css?fonts=bikham-cyr-script" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="./Vue/img/LOGO-APHB_1.png" />
 </head>
 <body>
 
