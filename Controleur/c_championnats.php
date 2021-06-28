@@ -1,13 +1,13 @@
 <?php
 
+require("./Modele/m_championnats.php");
+
 function championnat(){
-    require("./Modele/m_championnats.php");
     $championnats = allChamp();
     require("./Vue/v_championnats.php");
 }
 
 function ajoutChampionnat(){
-    require("./Modele/m_championnats.php");
     $championnats = allChampAjout();
     require("./Vue/v_ajoutChampionnats.php");
 }
@@ -17,11 +17,25 @@ function dateFr($date){
     return strftime('%d-%m-%Y',strtotime($date));
 }
 
-function creaChampionnat($nomChampionnat, $dateTournoi, $typeTournoi){
-    var_dump("OUIU");
+#region AJOUT D'UN CHAMPIONNAT
 
+//Cette fonction va vérifier si ilf aut créer un nouveau championnat ou non, puis reidirige vers la pages des tournois
+function triChampionnat(){
+    
+    extract($_POST);
+
+    $nomChamp;
+    $idChamp;
+    $dateTournoi;
+    $typeCompet;
+
+    if($idChamp == "undefined"){
+        createChampionnat($nomChamp, $dateTournoi, $typeCompet);
+    }
+    else{
+        createTournoi($idChamp, $dateTournoi, $typeCompet);
+    }
+
+    championnat();
 }
-
-function creaChampionnatExist(){
-
-}
+#endregion

@@ -1,22 +1,58 @@
 <?php
 
-
-//Cette fonction sert d'exemple à vous de l'adapter après
-function createChampionnat($typeChampionnat,$resultatChampionnat,$clubDomicile,$clubExterieur){
-	require ("./Modele/m_connect.php") ;
+function createTournoi($idChamp, $dateTournoi, $typeCompet){
+    require ("./Modele/m_connect.php") ;
    
-	$bd = $pdo->prepare("INSERT INTO championnats(typeChampionnat, resultatChampionnat, clubDomicile, clubExterieur) VALUES(:typeChampionnat, :resultatChampionnat, :clubDomicile,:clubExterieur)");
+	$bd = $pdo->prepare("INSERT INTO tournois(typeTournoi, dateTournoi, idChampionnat) VALUES(:typeCompet, :dateTournoi, :idChamp)");
     
-    $bd-> bindparam(':typeChampionnat',$typeChampionnat);
-   
-    $bd-> bindparam(':resultatChampionnat',$resultatChampionnat);
-   
-    $bd-> bindparam(':clubDomicile',$clubDomicile);
-   
-    $bd-> bindparam(':clubExterieur',$clubExterieur);
+    $bd-> bindparam(':typeCompet',$typeCompet);
+    $bd-> bindparam(':dateTournoi',$dateTournoi);
+    $bd-> bindparam(':idChamp',$idChamp);
     
 	$bd->execute();
+}
+
+function getIdChamp($nomChamp){
+    require ("./Modele/m_connect.php") ;
+
+    $sql = "SELECT idChampionnat FROM championnats WHERE nomChampionnat = :nomChampionnat";
+
+    try{
+        $cde_Question  = $pdo->prepare($sql);
+        $cde_Question-> bindparam(':nomChampionnat',$nomChamp);
+
+        $b_Question = $cde_Question ->execute();
+      
+        $tabChampionnats = array();
+        if($b_Question ){
+            while($tab = $cde_Question->fetch()){
+                $tabChampionnats [] = $tab;
+
+            }
+            
+        }
+    }
+    catch (PDOException $e) {
+        echo utf8_encode("Echec de select : " . $e->getMessage() . "\n");
+        die();
+    }
+    return $tabChampionnats;
+}
+
+
+//Cette fonction sert d'exemple à vous de l'adapter après
+function createChampionnat($nomChamp, $dateTournoi, $typeCompet){
+	require ("./Modele/m_connect.php") ;
+   
+	$bd = $pdo->prepare("INSERT INTO championnats(typeChampionnat, nomChampionnat) VALUES(1, :nomChampionnat)");
     
+    $bd-> bindparam(':nomChampionnat',$nomChamp);
+    
+	$bd->execute();
+
+    $idChamp = getIdChamp($nomChamp);
+
+    createTournoi($idChamp[0]["idChampionnat"], $dateTournoi, $typeCompet);
 }
 
 function allChampAjout(){

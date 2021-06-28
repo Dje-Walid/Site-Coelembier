@@ -57,15 +57,7 @@ function nextNewChamp(elmnt){
     var tournoi = document.querySelector("#Tournoi");
     tournoi.style.display = "inline";
 
-}
+    document.querySelector("#nomChampInputPHP").value = nomChamp;
+    document.querySelector("#idChampInput").value = idChamp;
 
-function nextNewTournoi(){
-    date = document.querySelector(".date").value;
-    creaChampionnat(nomChamp, date, type);
-
-}
-
-function creaChampionnat(nomChampionnat, dateTournoi, typeTournoi){
-    var echo = cnx().ajax.phpPostSyn("../Controleur/c_championnats.php", "creaChampionnat", nomChampionnat, dateTournoi, typeTournoi);
-    return echo;
 }

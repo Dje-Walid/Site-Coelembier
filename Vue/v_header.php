@@ -7,7 +7,7 @@
 
     <div class="bandeRouge">
         <div class="nom">
-            <h1>AMICALE DE PETANQUE DE LA HAIE-BERTRAND </h1>
+            <h1 id="nePasSupp">AMICALE DE PETANQUE DE LA HAIE-BERTRAND </h1>
             <h2>La Pétanque Loisir et Passion</h2>
         </div>
     </div>

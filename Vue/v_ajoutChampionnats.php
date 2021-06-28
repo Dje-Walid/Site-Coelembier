@@ -54,19 +54,29 @@
 
             <!-- ETAPE 2 -->
             <div id="Tournoi">
-                <h2>Sélectionnez le type de tournoi :</h2>
-                <select class="typeCompet" name="typeCompet" id="competSelect">
-                    <option value="">Type de compétitions</option>
-                    <option value="doublette" onclick="setType(this)">Doublette</option>
-                    <option value="tete" onclick="setType(this)">Tête à tête</option>
-                    <option value="triplette" onclick="setType(this)">Équipe</option>
-                </select>
 
-                <h2>Sélectionnez la date du tournoi :</h2>
+                <form action="index.php?controle=c_championnats&action=triChampionnat" method="post">
 
-                <input class="date" type="date">
+                    <h2>Sélectionnez le type de tournoi :</h2>
+                    <select class="typeCompet" name="typeCompet" id="competSelect">
+                        <option value="">Type de compétitions</option>
+                        <option value="doublette" onclick="setType(this)">Doublette</option>
+                        <option value="tête à tête" onclick="setType(this)">Tête à tête</option>
+                        <option value="triplette" onclick="setType(this)">Équipe</option>
+                    </select>
 
-                <input id="jq" class="btnIns" type="button" value="Suivant" onclick="nextNewTournoi()">
+                    <h2>Sélectionnez la date du tournoi :</h2>
+
+                    <input class="date" type="date" name="dateTournoi">
+
+                    <input id="nomChampInputPHP" class="value" type="text" name="nomChamp" hidden>
+                    <input id="idChampInput" class="value" type="text" name="idChamp" hidden>
+                    <!--
+                    <input class="value" type="text" name="typeTournoi" hidden>
+                    <input class="value" type="text" name="dateTournoi" hidden> -->
+
+                    <input class="btnIns" type="submit" nome="validationTournoi" value="Suivant">
+                </form>
                 
 
             </div>
