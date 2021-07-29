@@ -19,7 +19,7 @@ function dateFr($date){
 
 #region AJOUT D'UN CHAMPIONNAT
 
-//Cette fonction va vérifier si ilf aut créer un nouveau championnat ou non, puis reidirige vers la pages des tournois
+//Cette fonction va vérifier si ilf aut créer un nouveau championnat ou non, puis reidirige vers la page des tournois
 function triChampionnat(){
     
     extract($_POST);

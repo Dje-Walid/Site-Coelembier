@@ -1,16 +1,87 @@
-.condition {
+.page {
+    display: grid;
+    grid-template-columns: repeat(2, 1);
+    margin-top: 80px;
+}
+
+.page h1 {
     text-align: center;
-    margin-top:100px;
-    margin-bottom:110px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -0px;
+    background-color: #03224C;
+    color: white;
+}
+
+.page p {
+    margin-left: 20%;
+    font-size: 22px;
+}
+
+.adhesion {
+    grid-column: 1;
+    margin-right: -65%;
+    margin-left: 20%;
+    padding-bottom: 50%;
+    box-shadow: 0px 2px 3px black;
+}
+
+.pdf {
+    grid-column:2;
+    margin-right:10%;
+    margin-left: 35%;
+    box-shadow: 0px 2px 3px black;
+}
+.pdf p {
+    margin-left:50px;
+    margin-right:30px;
+}
+
+.ad {
+    margin-bottom:20%;
+}
+.pdf a {
+    font-size: 24px;
+    margin-left:80%;
+}
+.btnIns {
     font-size: 20px;
+    margin-left: 55%;
+    margin-top: 20px;
+    height: 9.6%;
+    width: 25%;
+    background-color: #03224C;
+    color: white;
+    border-color: #03224C;
 }
 
-.adhe {
-    margin-top:90px;
+.value {
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top: -10px;
+    width: 60%;
+    height: 9.6%;
 }
 
-.condition a {
+.tarif {
+    margin-top:80px;
+    margin-bottom:80px;
+    grid-column: 2;
+    border-collapse: collapse;
+    width: 50%;
+    font-size: 22px;
+    margin-left:25%;
+    text-align: center;
+    
+
+}
+
+.tarif th {
+    text-align: center;
+    margin-top: -0px;
+    background-color: #03224C;
+    color: white;
+
+}
+.tarif td {
     border:solid 1px black;
-    font-weight: bold;
 }
+

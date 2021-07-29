@@ -1,0 +1,50 @@
+.page {
+    margin-top: 80px;
+}
+
+.page h1 {
+    text-align: center;
+    margin-top: -0px;
+    background-color: #03224C;
+    color: white;
+}
+
+.page p {
+    margin-left: 20%;
+    font-size: 22px;
+}
+
+.valueCo {
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top: -10px;
+    width: 60%;
+    height: 5%;
+}
+
+.sujet {
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top: -10px;
+    width: 60%;
+    height: 20%;
+}
+
+.btnCo {
+    font-size: 20px;
+    margin-left: 55%;
+    margin-top: 20px;
+    height: 7%;
+    width: 25%;
+    margin-bottom: 20px;
+    background-color: #03224C;
+    color: white;
+    border-color: #03224C;
+}
+
+.connexion {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 440px ;
+    box-shadow: 0px 2px 3px black;
+}
