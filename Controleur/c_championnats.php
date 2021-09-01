@@ -8,7 +8,6 @@ function championnat(){
 }
 
 function ajoutChampionnat(){
-    $championnats = allChampAjout();
     require("./Vue/v_ajoutChampionnats.php");
 }
 
@@ -24,18 +23,28 @@ function triChampionnat(){
     
     extract($_POST);
 
-    $nomChamp;
-    $idChamp;
     $dateTournoi;
     $typeCompet;
 
-    if($idChamp == "undefined"){
-        createChampionnat($nomChamp, $dateTournoi, $typeCompet);
+    if(isset($_FILES['file'])){
+        $tmpName = $_FILES['file']['tmp_name'];
+        $srcTournoi = $_FILES['file']['name'];
     }
-    else{
-        createTournoi($idChamp, $dateTournoi, $typeCompet);
-    }
+
+    move_uploaded_file($tmpName, './Vue/img/Championnats/'.$srcTournoi);
+
+    createTournoi($dateTournoi, $typeCompet, $srcTournoi);
 
     championnat();
 }
 #endregion
+
+function supprimerChampionnat(){
+    
+    extract($_POST);
+
+    dropTournoi($idTournoi);
+
+    championnat();
+
+}
