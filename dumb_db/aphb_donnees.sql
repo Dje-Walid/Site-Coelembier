@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `adherents` (
   PRIMARY KEY (`idAdherent`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table aphb.adherents : ~2 rows (environ)
+-- Listage des données de la table aphb.adherents : ~3 rows (environ)
 /*!40000 ALTER TABLE `adherents` DISABLE KEYS */;
 INSERT INTO `adherents` (`idAdherent`, `nomAdherent`, `prenomAdherent`, `telephoneAdherent`, `mailAdherent`, `mdpAdherent`, `paiementAdherent`, `isAdmin`) VALUES
 	(1, 'Djemmaa', 'Walid', NULL, NULL, 'dfdfd', 0, 1),
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `tournois` (
   PRIMARY KEY (`idTournoi`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table aphb.tournois : ~5 rows (environ)
+-- Listage des données de la table aphb.tournois : ~7 rows (environ)
 /*!40000 ALTER TABLE `tournois` DISABLE KEYS */;
 INSERT INTO `tournois` (`idTournoi`, `typeTournoi`, `dateTournoi`, `srcTournoi`) VALUES
 	(1, 'doublette', '2021-06-23', 'tournoi1.png'),

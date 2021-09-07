@@ -29,10 +29,22 @@ h1 {
     margin-left: 23%;
 }
 
-.btnCreaTournoi{
+.btnRefresh{
     margin-left: 15.5%;
     font-size: 20px;
     margin-top: 40px;
+    margin-bottom: 20px;
+    height: 5%;
+    width: 65%;
+    background-color: #03224C;
+    color: white;
+    border-color: #03224C;
+}
+
+.btnCreaTournoi{
+    margin-left: 15.5%;
+    font-size: 20px;
+    margin-top: -25px;
     margin-bottom: 20px;
     height: 5%;
     width: 65%;

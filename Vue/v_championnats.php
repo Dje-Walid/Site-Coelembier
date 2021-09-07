@@ -41,6 +41,10 @@
         <option value="tête à tête" onclick="selectChampionnat(this)">Tête à tête</option>
         <option value="triplette" onclick="selectChampionnat(this)">Équipe</option>
     </select>
+
+    <form action="index.php?controle=c_championnats&action=championnat" method="post">
+        <input class="btnRefresh" type="submit" name="fromRefresh" value="Rénitialiser">
+    </form>
     
     <?php
         if(isAdmin()) :
@@ -62,7 +66,7 @@
 
         <h1 id="<?php echo dateFr($champ["dateTournoi"]); ?>" class="<?php echo $champ["typeTournoi"]; ?>"><?php echo dateFr($champ["dateTournoi"]);?> A.P.H.B TOURNOI <?php echo strtoupper($champ["typeTournoi"]); ?></h1>
         
-        <form action="index.php?controle=c_championnats&action=supprimerChampionnat" method="post">
+        <form id="table" action="index.php?controle=c_championnats&action=supprimerChampionnat" method="post">
             <img id="<?php echo dateFr($champ["dateTournoi"]); ?>" class="<?php echo $champ["typeTournoi"]; ?>" src="./Vue/img/Championnats/<?php echo $champ["srcTournoi"]; ?>"/>
             <input type="text" name="idTournoi" value="<?php echo $champ["idTournoi"]; ?>" hidden>
                         

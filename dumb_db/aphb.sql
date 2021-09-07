@@ -1,3 +1,22 @@
+-- --------------------------------------------------------
+-- Hôte :                        localhost
+-- Version du serveur:           5.7.24 - MySQL Community Server (GPL)
+-- SE du serveur:                Win64
+-- HeidiSQL Version:             10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Listage de la structure de la base pour aphb
+CREATE DATABASE IF NOT EXISTS `aphb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `aphb`;
+
+-- Listage de la structure de la table aphb. adherents
 CREATE TABLE IF NOT EXISTS `adherents` (
   `idAdherent` int(11) NOT NULL AUTO_INCREMENT,
   `nomAdherent` varchar(50) NOT NULL,
@@ -8,44 +27,21 @@ CREATE TABLE IF NOT EXISTS `adherents` (
   `paiementAdherent` int(11) NOT NULL,
   `isAdmin` int(11) NOT NULL,
   PRIMARY KEY (`idAdherent`)
-);
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `championnats` (
-  `idChampionnat` int(11) NOT NULL AUTO_INCREMENT,
-  `typeChampionnat` int(11) NOT NULL,
-  `nomChampionnat` varchar(100) NOT NULL,
-  `resultatChampionnat` varchar(50) DEFAULT NULL,
-  `clubDomicile` varchar(50) DEFAULT NULL,
-  `clubExterieur` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idChampionnat`)
-);
+-- Les données exportées n'étaient pas sélectionnées.
 
+-- Listage de la structure de la table aphb. tournois
 CREATE TABLE IF NOT EXISTS `tournois` (
   `idTournoi` int(11) NOT NULL AUTO_INCREMENT,
   `typeTournoi` varchar(50) DEFAULT NULL,
-  `dateTournoi` DATE DEFAULT NULL,
-  `idChampionnat` int(11) NOT NULL,
-  PRIMARY KEY (`idTournoi`),
-  KEY `idChampionnat` (`idChampionnat`),
-  CONSTRAINT `tournois_ibfk_1` FOREIGN KEY (`idChampionnat`) REFERENCES `championnats` (`idChampionnat`)
-);
+  `dateTournoi` date DEFAULT NULL,
+  `srcTournoi` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idTournoi`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `participer` (
-  `idAdherent` int(11) NOT NULL,
-  `idTournoi` int(11) NOT NULL,
-  `partieJoue` int(11) DEFAULT NULL,
-  `partieGagne` int(11) DEFAULT NULL,
-  `pointGlobal` int(11) DEFAULT NULL,
-  `point1` int(11) DEFAULT NULL,
-  `point2` int(11) DEFAULT NULL,
-  `point3` int(11) DEFAULT NULL,
-  `point4` int(11) DEFAULT NULL,
-  `pris1` int(11) DEFAULT NULL,
-  `pris2` int(11) DEFAULT NULL,
-  `pris3` int(11) DEFAULT NULL,
-  `pris4` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idAdherent`,`idTournoi`),
-  KEY `idTournoi` (`idTournoi`),
-  CONSTRAINT `participer_ibfk_1` FOREIGN KEY (`idAdherent`) REFERENCES `adherents` (`idAdherent`),
-  CONSTRAINT `participer_ibfk_2` FOREIGN KEY (`idTournoi`) REFERENCES `tournois` (`idTournoi`)
-);
+-- Les données exportées n'étaient pas sélectionnées.
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

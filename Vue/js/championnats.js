@@ -11,7 +11,7 @@ function setAnnee(elmnt){
 
 function selectChampionnat(elmnt){
     
-    var allChamps = document.querySelectorAll("table");
+    var allChamps = document.querySelectorAll("#table img");
     var champ;
 
     var allH1 = document.querySelectorAll("h1");
