@@ -32,9 +32,7 @@ CREATE TABLE IF NOT EXISTS `adherents` (
 -- Listage des données de la table aphb.adherents : ~3 rows (environ)
 /*!40000 ALTER TABLE `adherents` DISABLE KEYS */;
 INSERT INTO `adherents` (`idAdherent`, `nomAdherent`, `prenomAdherent`, `telephoneAdherent`, `mailAdherent`, `mdpAdherent`, `paiementAdherent`, `isAdmin`) VALUES
-	(1, 'Djemmaa', 'Walid', NULL, NULL, 'dfdfd', 0, 1),
-	(2, 'Chaufournais', 'Loïc', NULL, NULL, 'dsfsfs', 0, 0),
-	(3, 'Admin', 'Admin', '0782647706', 'admin@admin.fr', '$2y$10$Z7Ktrbg5pUVM7JywScNzAejD285MO9U1LVV/DpK6j4vDRT6m8yJRG', 1, 1);
+	(1, 'Admin', 'Admin', '0782647706', 'admin@admin.fr', '$2y$10$Z7Ktrbg5pUVM7JywScNzAejD285MO9U1LVV/DpK6j4vDRT6m8yJRG', 1, 1);
 /*!40000 ALTER TABLE `adherents` ENABLE KEYS */;
 
 -- Listage de la structure de la table aphb. tournois

@@ -7,4 +7,6 @@ function profil(){
 
 function deconnexion(){
     session_destroy();
+    require("./Modele/m_connexion.php");
+    require("./Vue/v_connexion.php");
 }

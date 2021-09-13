@@ -14,8 +14,6 @@ function userExist(){
 
     $user = checkUser($mailCo);
 
-    var_dump($user['mailAdherent']);
-
     if($user){
 
         if( password_verify($mdpCo, $user['mdpAdherent']) ){
